@@ -6,8 +6,8 @@ RUN apt-get update \
   && ln -s /usr/bin/python3 python \
   && pip3 install --upgrade pip
 
-RUN git config --global user.name '<your username>' \
-  && git config --global user.email '<your email>' \
+RUN git config --global user.name 'aditi-agarwal-tw' \
+  && git config --global user.email 'aditi.agarwal@thoughtworks.com' \
   && git config --global credential.helper cache
 
 WORKDIR /home/ci-workshop-app

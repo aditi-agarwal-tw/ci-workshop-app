@@ -14,7 +14,10 @@ jobs:
             - v1-dependencies-
       - run:
           name: install dependencies
-          command: bin/install_dependencies.sh
+          command: |
+          bin/install_dependencies.sh
+          source .venv/bin/activate
+          pip install joblib
       - save_cache:
           paths:
             - .venv
@@ -22,6 +25,12 @@ jobs:
       - run:
           name: run unit tests
           command: bin/test.sh
+      - run:
+          name: train model
+          command: bin/train_model.sh
+      - run:
+          name: test model metrics
+          command: bin/test_mdoel_metrics.sh 
 
 workflows:
   version: 2
