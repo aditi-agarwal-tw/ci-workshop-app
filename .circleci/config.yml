@@ -15,9 +15,9 @@ jobs:
       - run:
           name: install dependencies
           command: |
-          bin/install_dependencies.sh
-          source .venv/bin/activate
-          pip install joblib
+            bin/install_dependencies.sh
+            source .venv/bin/activate
+            pip install joblib
       - save_cache:
           paths:
             - .venv
