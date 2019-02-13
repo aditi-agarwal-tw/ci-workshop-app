@@ -50,3 +50,6 @@ workflows:
   my_ci_pipeline:
     jobs:
       - train_and_test
+      - deploy_staging:
+          requires:
+            - train_and_test
