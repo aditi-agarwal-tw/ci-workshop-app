@@ -30,7 +30,7 @@ jobs:
           command: bin/train_model.sh
       - run:
           name: test model metrics
-          command: bin/test_mdoel_metrics.sh 
+          command: bin/test_model_metrics.sh 
       - persist_to_workspace:
           root: .
           paths:
